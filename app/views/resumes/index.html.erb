@@ -1,2 +1,15 @@
-<h1>履歷列表</h1>
-<%= link_to "新增履歷",new_resumes_path%>
+<h1>Resume</h1>
+
+
+<%= link_to "新增履歷", new_resume_path %>
+
+<ul>
+<% @resumes.each do |resume| %>
+    <li>
+    <%= resume.title %>
+    </li>
+<% end %>
+</ul>
+
+
+

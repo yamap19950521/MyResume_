@@ -1,13 +1,21 @@
 <h1>新增履歷</h1>
 
-<form action="/" method="post">
-  <div>
-    <input type="text" name="title" />
-  </div>
+<%= form_with(model: @resume) do |form| %>
+<div class="fields">
+  <%= form.label :title,"標題" %>
+  <%= form.text_field :title,autocomplete:"off",autofocus:true %>
+</div>
 
-  <div>
-    內文
-    <textarea name="content"></textarea>
-  </div>
-  <input type="submit" value="新增" />
-</form>
+<div class="fields">
+  <%= form.label :content,"內容" %>
+  <%= form.text_area  :content%>
+</div>
+
+
+<div>
+  <%= form.select :status, Resume.all_status %>
+</div>
+  <%= form.submit %>
+<% end %>
+
+

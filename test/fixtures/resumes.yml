@@ -3,13 +3,11 @@
 one:
   title: MyString
   content: MyText
-  content: MyText
   contact: MyText
-  status: MyText
+  status: MyString
 
 two:
   title: MyString
   content: MyText
-  content: MyText
   contact: MyText
-  status: MyText
+  status: MyString
