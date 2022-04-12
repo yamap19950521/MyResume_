@@ -4,12 +4,9 @@
 <%= link_to "新增履歷", new_resume_path %>
 
 <ul>
-<% @resumes.each do |resume| %>
-    <li>
-    <%= resume.title %>
-    </li>
-<% end %>
+<%= render @resumes%>
 </ul>
+
 
 
 
